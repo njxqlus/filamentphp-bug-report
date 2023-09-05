@@ -21,9 +21,9 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Repeater::make('foo')->schema([
-                    Forms\Components\MarkdownEditor::make('bar')
-                ])->reorderableWithButtons()
+                Forms\Components\TextInput::make('foo')
+                    ->autofocus(),
+                Forms\Components\TextInput::make('bar')
             ]);
     }
 
